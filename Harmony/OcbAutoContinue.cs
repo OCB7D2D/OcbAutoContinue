@@ -61,11 +61,11 @@ public class OcbAutoContinue : IModApi
     //     }
     // }
 
-    [HarmonyPatch(typeof(XUiC_MainMenu))]
+    [HarmonyPatch(typeof(XUiC_MainMenuButtons))]
     [HarmonyPatch("OnOpen")]
     public class OCB_Main_Menu_AutoClick
     {
-        private static void Postfix(XUiC_MainMenu __instance)
+        private static void Postfix(XUiC_MainMenuButtons __instance)
         {
             if (!IsAutoStart()) return;
             if (isStarted) __instance.btnQuit_OnPressed(null, 0);
