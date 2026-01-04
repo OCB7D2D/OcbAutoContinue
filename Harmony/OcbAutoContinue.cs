@@ -2,7 +2,7 @@ using HarmonyLib;
 using UnityEngine;
 using System;
 using System.Reflection;
-using System.Collections.Generic;
+using System.Collections;
 
 public class OcbAutoContinue : IModApi
 {
@@ -77,11 +77,19 @@ public class OcbAutoContinue : IModApi
     [HarmonyPatch("OnOpen")]
     public class OCB_XUIC_NewContinueGame
     {
+
+        private static IEnumerator ContinueGame(XUiC_NewContinueGame __instance)
+        {
+            yield return new WaitForSeconds(0.05f);
+            __instance.BtnStart_OnPressed(null, 0);
+            isStarted = true;
+        }
+
         private static void Postfix(XUiC_NewContinueGame __instance)
         {
             if (!IsAutoStart()) return;
-            __instance.BtnStart_OnPressed(null, 0);
-            isStarted = true;
+            GameManager.Instance.StartCoroutine(
+                ContinueGame(__instance));
         }
     }
 

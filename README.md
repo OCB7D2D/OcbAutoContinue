@@ -1,4 +1,4 @@
-# OCB Auto Continue Mod - 7 Days to Die (V1.0 exp) Addon
+# OCB Auto Continue Mod - 7 Days to Die (V2.1) Addon
 
 This mod is mainly meant for fellow modders! It is pretty
 much 90% copied from SphereII's SCore. It adds an additional
@@ -20,6 +20,10 @@ Thanks to SphereII for the original code and idea!
 Ensure you don't have double nested folders and ModInfo.xml is at right place!
 
 ## Changelog
+
+### Version 0.3.1
+
+- Compatibility with V2.5 (b23)
 
 ### Version 0.3.0
 
