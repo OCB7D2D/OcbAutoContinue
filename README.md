@@ -1,4 +1,4 @@
-# OCB Auto Continue Mod - 7 Days to Die (V2.1) Addon
+# OCB Auto Continue Mod - 7 Days to Die (V2.5) Addon
 
 This mod is mainly meant for fellow modders! It is pretty
 much 90% copied from SphereII's SCore. It adds an additional
